@@ -3,7 +3,10 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
+import { HomePage } from './../pages/home/home';
+import { GeneratedTest } from './../pages/generated-test/generated-test';
+import { MenuTest } from './../pages/menu-test/menu-test';
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -16,7 +19,8 @@ export class MyApp {
     this.pages = [
       {title: 'Home', component: HomePage, icon: 'home'},
       {title: 'Overlay Components', component: HomePage, icon: ''},
-      {title: 'Components', component: HomePage, icon: ''}
+      {title: 'Menu', component: MenuTest, icon: ''},
+      {title: 'Generated Teste', component: GeneratedTest, icon: ''}
     ];
 
     platform.ready().then(() => {
@@ -30,5 +34,5 @@ export class MyApp {
   openPage(page: any) : void {
     this.rootPage = page.component;
   }
-}
 
+}
